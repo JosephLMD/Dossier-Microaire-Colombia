@@ -35,7 +35,11 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);
 @media(max-width:600px){.bar .r{display:none}}
 
 /* ── portada ── */
-.port{padding:64px 0 10px}
+.port{padding:56px 0 10px}
+/* La palabra MicroAire va sola y pequena. Identifica a quien va dirigido el
+   documento, no a quien lo escribe. Sin fotos: el argumento es numerico y una
+   imagen de equipo solo competiria con el. */
+.marca{display:block;width:132px;height:auto;margin-bottom:26px;opacity:.92}
 .port .k{font-family:'Inter',sans-serif;font-size:11.5px;font-weight:700;letter-spacing:2.4px;
   text-transform:uppercase;color:var(--azul-d);margin-bottom:20px}
 .port h1{font-size:clamp(34px,6vw,52px);line-height:1.08;letter-spacing:-1.4px;
@@ -115,6 +119,15 @@ ul.lista li::before{content:'';position:absolute;left:2px;top:11px;width:6px;hei
 .pc{font-family:'Inter',sans-serif;font-size:11px;font-weight:700;letter-spacing:.6px;
   color:#8A6510;background:#FBF0D8;border-radius:4px;padding:1px 7px;white-space:nowrap}
 
+.fuentes{border-top:1px solid var(--linea);padding-top:22px;margin-bottom:26px}
+.fuentes h5{font-family:'Inter',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;
+  text-transform:uppercase;color:var(--azul-d);margin-bottom:12px}
+.fuentes ol{margin:0 0 14px 18px;padding:0}
+.fuentes li{font-size:13.5px;line-height:1.6;color:var(--gris);margin-bottom:8px}
+.fuentes a{color:var(--azul-d);text-decoration:none;border-bottom:1px solid var(--azul-l)}
+.fuentes a:hover{border-bottom-color:var(--azul)}
+.fuentes .nota{font-size:13px;color:var(--gris);font-style:italic}
+.firma{font-size:13.5px;color:var(--gris);line-height:1.7}
 footer{border-top:1px solid var(--linea);margin-top:56px;padding:26px 0 60px;
   font-family:'Inter',sans-serif;font-size:13px;color:var(--gris);line-height:1.7}
 @media print{header{position:static}section{page-break-inside:avoid}}
@@ -133,6 +146,7 @@ footer{border-top:1px solid var(--linea);margin-top:56px;padding:26px 0 60px;
 <div class="wrap">
 
   <div class="port">
+    <img class="marca" src="microaire-wordmark.png" alt="MicroAire" width="900" height="164">
     <div class="k">Exclusive distribution · Colombia · PAL</div>
     <h1>The channel already exists.<br>This is about what it becomes.</h1>
     <p class="sub">You are not being asked to build a distributor in Colombia. You are being asked to
@@ -146,12 +160,14 @@ footer{border-top:1px solid var(--linea);margin-top:56px;padding:26px 0 60px;
     <ol>
       <li><a href="#resumen">The proposal in one page</a></li>
       <li><a href="#canal">Why the channel is already ours</a></li>
-      <li><a href="#servicio">What we are giving first: service</a></li>
+      <li><a href="#servicio">Where the brand is losing customers: service</a></li>
       <li><a href="#mercado">Why Colombia is the right country for PAL</a></li>
+      <li><a href="#competencia">The competitive position in Colombia today</a></li>
       <li><a href="#ano">Why this year was flat, and what it tells us</a></li>
       <li><a href="#pedidos">The four requests</a></li>
       <li><a href="#numero">What we commit to, and what your support unlocks</a></li>
       <li><a href="#unidades">How the units get sold</a></li>
+      <li><a href="#lanzamiento">The SYNERGY 7020 and what 2027 requires</a></li>
       <li><a href="#campo">What we have already built</a></li>
       <li><a href="#portafolio">One distributor for the whole portfolio</a></li>
       <li><a href="#decision">What we are asking you to decide</a></li>
@@ -170,10 +186,11 @@ footer{border-top:1px solid var(--linea);margin-top:56px;padding:26px 0 60px;
       congress activity, including half the cost of speakers.</p>
 
     <p><b>What we commit to.</b> <b>USD 526,000</b> in the coming year with none of the above. That is the floor, and it matches what was purchased last year. With the four requests in place,
-      <b>USD 614,000</b>, or roughly 28 units.</p>
+      <b>USD 604,900</b>, which is the floor plus fifteen per cent, compounding at that same
+      rate each year after.</p>
 
     <p><b>What it is worth to you.</b> Held across a five year agreement, the difference between
-      those two paths is approximately <b>USD 1.51 million</b> in incremental revenue to you. That figure, not our enthusiasm, is the argument.</p>
+      those two paths is approximately <b>USD 1.45 million</b> in incremental revenue to you. That figure, not our enthusiasm, is the argument.</p>
 
     <div class="dest">
       <p><b>The one sentence that matters.</b> Every surgeon relationship MicroAire has in
@@ -205,8 +222,9 @@ footer{border-top:1px solid var(--linea);margin-top:56px;padding:26px 0 60px;
       <tr><td>Surgeon relationships</td><td>Held by the owner, who sells</td><td>Held by a rotating salesforce</td></tr>
       <tr><td>Clinical training</td><td>Structured programme, Bogotá base</td><td>Occasional, reactive</td></tr>
       <tr><td>Service</td><td>Certified local station</td><td>Ship abroad, six weeks</td></tr>
-      <tr><td>Demand generation</td><td>Site, content, eight published surgeons</td><td>None specific to the brand</td></tr>
-      <tr><td>Reporting</td><td>Territory data and forecasts</td><td>Order flow only</td></tr>
+      <tr><td>Demand generation</td><td>Site, content library and an advisory line</td><td>None specific to the brand</td></tr>
+      <tr><td>Structure</td><td>Clear procedures, organised information, data management</td><td>Order flow only</td></tr>
+      <tr><td>Market knowledge</td><td>Used to structure growth, not just to react to it</td><td>None specific to the brand</td></tr>
     </table>
     </div>
 
@@ -214,44 +232,64 @@ footer{border-top:1px solid var(--linea);margin-top:56px;padding:26px 0 60px;
       ACT exists to run this brand properly rather than to stock it alongside everything else.</p>
 
     <div class="dest verde">
-      <p><b>One item belongs here rather than in a regulatory appendix.</b> The INVIMA sanitary
-        registration for PAL is held by ACT and is current. In practice that means MicroAire's
-        legal ability to place PAL on the Colombian market already sits with the company making
-        this proposal. Nothing has to be transferred, and no third party has to agree to
-        anything for this to proceed.</p>
+      <p><b>One thing belongs here rather than in a regulatory appendix.</b> ACT holds the team,
+        the experience and the practical knowledge of how registration works in Colombia and how
+        it is moved. We commit to keeping everything regulatory relating to MicroAire compliant
+        with local rules. That is a capability, not a claim on your property.</p>
     </div>
   </section>
 
   <!-- ═══ 3 ═══ -->
   <section id="servicio">
     <div class="num">03 · Service</div>
-    <h2>What we are giving first: service</h2>
-    <p class="lead">Before anything we are asking for, this is the item that costs MicroAire the
-      most today and is invisible from Charlottesville.</p>
+    <h2>Where the brand is losing customers: service</h2>
+    <p class="lead">Before anything we are asking for, this is the item that is costing MicroAire
+      the most in Colombia, and it is invisible from Charlottesville.</p>
 
-    <p>A PAL handpiece is a mechanical instrument and it wears. With no certified maintenance
-      in Colombia, a unit needing repair leaves the country and returns in about six weeks. For
-      that period the surgeon has an idle theatre, and at the end of it a decision to make about
-      whether to buy the next one.</p>
+    <p>A PAL handpiece is a mechanical instrument and it wears. With no certified maintenance in
+      the country, a unit needing repair leaves Colombia and comes back about six weeks later.
+      That much is a logistics problem. What follows is not.</p>
 
+    <h3>What it costs a surgeon to keep the equipment</h3>
     <div class="cifras">
-      <div class="cif"><div class="n">6 weeks</div><div class="l">Repair turnaround today. The handpiece leaves Colombia.</div></div>
-      <div class="cif"><div class="n">3 to 5 days</div><div class="l">With a certified station operating locally.</div></div>
-      <div class="cif"><div class="n">Zero</div><div class="l">International shipments for routine repair.</div></div>
+      <div class="cif"><div class="n">17.24%</div><div class="l">of the equipment value spent on maintenance every year, today</div></div>
+      <div class="cif"><div class="n">5%</div><div class="l">what a serviceable capital instrument should cost to maintain</div></div>
+      <div class="cif"><div class="n">3.4x</div><div class="l">how far above a reasonable level that sits</div></div>
     </div>
 
-    <h3>How it gets done, and why it is not a two year promise</h3>
-    <p>A new INVIMA authorisation for a repair station in Colombia takes roughly two years. We
-      are not proposing to wait for one. The station will be subcontracted to <b>Nova Tecnica</b>,
-      an establishment already authorised and already servicing equipment of this class. That
-      turns a two year regulatory project into a commercial arrangement, and it means local
-      repair can be running in months.</p>
+    <p>On an installed system of about COP 116.7 million before VAT, that is roughly COP 20.1
+      million a year to keep a machine in service, against the COP 5.8 million it should be.</p>
+
+    <div class="dest oro">
+      <p><b>And so surgeons stop servicing it.</b> They wait five or six years instead of
+        maintaining annually. By then the accumulated maintenance is close to <b>95% of the price
+        of a new machine</b>. When a unit does fail, the emergency repair takes long enough that
+        the equipment cannot be held in regulatory compliance in the meantime.</p>
+      <p>The conclusion a Colombian surgeon reaches is not that MicroAire is expensive. It is
+        that MicroAire is <b>not viable to own</b>. That sentence is being said in this market
+        right now, and it is the single most damaging thing happening to the brand here.</p>
+    </div>
+
+    <h3>What we propose to do about it</h3>
+    <p>Building our own certified station is not the fast answer. A new INVIMA authorisation for
+      a repair station takes roughly two years, and standing one up would cost in the region of
+      USD 30,000. So we have taken a different route.</p>
+    <p><b>ACT has contracted Nova Tecnica to work for ACT directly.</b> They are already
+      authorised and already service equipment of this class. This is not a loose subcontract
+      that leaves the surgeon between two companies: the relationship, the response time and the
+      accountability sit with ACT.</p>
+
+    <div class="cifras">
+      <div class="cif"><div class="n">6 weeks</div><div class="l">repair turnaround today, with the handpiece leaving Colombia</div></div>
+      <div class="cif"><div class="n">3 to 5 days</div><div class="l">with the arrangement in place</div></div>
+      <div class="cif"><div class="n">Zero</div><div class="l">international shipments for routine repair</div></div>
+    </div>
 
     <div class="dest verde">
-      <p><b>The part that is not about logistics.</b> Colombian surgeons are declining to renew
-        and upgrade because there is no maintenance in the country. That reluctance attaches to
-        the MicroAire name, not to ours. A local station repairs the reputation and permanently
-        removes international repair shipping from your cost of serving this market.</p>
+      <p><b>What this is worth to MicroAire.</b> It removes international repair shipping from
+        your cost of serving Colombia, permanently. And it removes the reason surgeons currently
+        give for not buying the next machine, which is a revenue problem dressed as a service
+        problem.</p>
     </div>
   </section>
 
@@ -276,19 +314,74 @@ footer{border-top:1px solid var(--linea);margin-top:56px;padding:26px 0 60px;
       number of high-throughput clinics.</p>
 
     <h3>The competitive position</h3>
-    <p>PAL LipoSculptor is the only power-assisted liposuction system still in manufacture.
-      Wells-Johnson, Byron and Medtronic have all left the category. MicroAire therefore does not compete against other PAL devices here. It competes across modalities, against ultrasound and laser platforms. That is a clinical conversation with surgeons rather than
-      a price argument, and it is the conversation we are equipped to have.</p>
+    <p>PAL competes on two fronts here. Against other power assisted systems, several of which
+      are sold in Colombia today and one of which is Colombian, and against different modalities
+      altogether, ultrasound and laser platforms. Section 05 sets out who the direct competitors
+      actually are. It is a clinical conversation with surgeons rather than a price argument, and
+      it is the conversation we are equipped to have.</p>
 
     <div class="dest oro">
-      <p><b>A risk that argues for exclusivity.</b> Clone units are openly marketed in this
-        region as substitutes for the 650 handpiece. A single accountable distributor with
-        traceable serial numbers and authorised service is the only practical answer, and it
-        protects pricing and clinical reputation at the same time.</p>
+      <p><b>A risk that argues for exclusivity.</b> Replica units are sold openly in this region,
+        the first of them by a Colombian company. A single accountable distributor with traceable
+        serial numbers and authorised service is the only practical answer, and it protects
+        pricing and clinical reputation at the same time.</p>
     </div>
   </section>
 
-  <!-- ═══ 5 ═══ -->
+  
+  <!-- ═══ 4b ═══ -->
+  <section id="competencia">
+    <div class="num">05 · The competitive picture</div>
+    <h2>The competitive position in Colombia today</h2>
+    <p class="lead">We would rather say this plainly than have you discover it from a sales
+      report two years from now.</p>
+
+    <p>PAL is not the only power assisted liposuction system a Colombian surgeon can buy, and it
+      has not been for some time. Three brands compete for the same surgeon in this market today.</p>
+
+    <div class="tabla">
+    <table>
+      <tr><th>Brand</th><th>Origin</th><th>Why it matters here</th></tr>
+      <tr><td><b>Visión Médica / Argoplasma</b><br>
+          <a href="https://visionmedica.co" target="_blank" rel="noopener">visionmedica.co</a></td>
+          <td>Colombia</td>
+          <td>The first company to bring a replica to this market. Local, present, and known to the same surgeons you are selling to.</td></tr>
+      <tr><td><b>Faga Medical</b><br>
+          <a href="https://fagamed.com.br" target="_blank" rel="noopener">fagamed.com.br</a></td>
+          <td>Brazil</td>
+          <td>Regional manufacturer competing on price and on availability, which in this market often decides it.</td></tr>
+      <tr><td><b>Nouvag</b><br>
+          <a href="https://nouvag.com/en/" target="_blank" rel="noopener">nouvag.com</a></td>
+          <td>Switzerland</td>
+          <td>Established maker of surgical motor and liposuction systems, with the credibility that carries.</td></tr>
+    </table>
+    </div>
+
+    <div class="dest oro">
+      <p><b>The uncomfortable part.</b> A Colombian competitor got to market with a replica while
+        MicroAire was not watching, and it is winning surgeons on the two things this document has
+        already described: what it costs to keep the equipment running, and how long it takes to
+        get it fixed. That is not a product problem. It is a support problem, and support is the
+        part a manufacturer delegates to its distributor.</p>
+    </div>
+
+    <h3>Where the brand actually stands</h3>
+    <p>We will not soften this. In Colombia the reputation of the brand has fallen, and it has
+      fallen for reasons that are fixable rather than fundamental. Surgeons who own the equipment
+      talk to surgeons who are considering it, and what they pass on is the maintenance bill and
+      the six week wait. Every one of the four requests in this proposal exists to reverse a
+      specific part of that.</p>
+
+    <div class="dest">
+      <p><b>And there is an argument for doing it here first.</b> If a market where the brand has
+        slipped can be turned around with a service arrangement, structured training and real
+        commercial support, that is not only worth having in Colombia. It is a model MicroAire
+        could take to any territory where the same thing is happening quietly. We would rather be
+        the case study than the cautionary tale.</p>
+    </div>
+  </section>
+
+<!-- ═══ 5 ═══ -->
   <section id="ano">
     <div class="num">05 · This year</div>
     <h2>Why this year was flat, and what it tells us</h2>
@@ -300,16 +393,26 @@ footer{border-top:1px solid var(--linea);margin-top:56px;padding:26px 0 60px;
       In peso terms a USD 20,000 console went from roughly COP 80.8 million to COP 67.2 million.
       Your equipment became cheaper here, not more expensive.</p>
 
-    <p>What changed was the cost of money. Banco de la República raised its policy rate from
-      9.25% at the start of 2026 to <b>12.00%</b> in June, a rise of 275 basis points in a
-      single year, and held it there on 5 August 2026. Annual inflation stood at 5.8% in May.</p>
+    <p>Two things changed, and neither was price.</p>
+
+    <p><b>Money became expensive.</b> Banco de la República raised its policy rate from 9.25% at
+      the start of 2026 to <b>12.00%</b> in June, a rise of 275 basis points in a single year, and
+      held it there on 5 August. Annual inflation stood at 5.8% in May.</p>
+
+    <p><b>And the country spent the year waiting.</b> The presidential contest was not settled
+      until the run off of 21 June, and it was decided by <b>under one point</b>, 49.66% against
+      48.70%, a margin of roughly 250,800 votes. The new government took office on <b>7 August 2026</b>. Through almost the entire commercial year, capital sat still. In a market where a
+      large share of aesthetic patients come from abroad and their money stays in offshore
+      accounts until the picture is clear, that is not background noise. It is the difference
+      between a surgeon committing to a console this quarter or waiting to see who won.</p>
 
     <div class="dest">
-      <p><b>So the binding constraint is financing, not price.</b> The equipment became more
-        affordable while borrowing to buy it became materially more expensive, and MicroAire
-        does not offer credit. In a market like this one, whoever carries the financing takes
-        the sale. That is why the request for 180-day terms is not a concession we are seeking;
-        it is the single most effective growth mechanism available to us in the coming year.</p>
+      <p><b>So the constraint was never price.</b> The equipment became more affordable in pesos
+        while the cost of money rose and the country held its breath. Commercial terms are what
+        let a distributor keep selling through a year like that, and MicroAire does not currently
+        offer them. That is why the request for 180 day terms is not a concession we are seeking.
+        It is the mechanism that keeps the channel moving when conditions do what they did this
+        year.</p>
     </div>
   </section>
 
@@ -326,20 +429,21 @@ footer{border-top:1px solid var(--linea);margin-top:56px;padding:26px 0 60px;
           frequently cited reason surgeons decline to renew, and removes international repair
           shipping from your costs.</div></div></div>
       <div class="paso"><div><div class="t">Payment terms of 180 days</div>
-        <div class="d">So that ACT can carry the financing in a market where the policy rate sits
-          at 12%. Separately, where we are able to settle an invoice immediately, we would like
+        <div class="d">So that ACT can carry the commercial terms its customers need in a market where the
+          cost of money has risen sharply. Separately, where we are able to settle an invoice immediately, we would like
           to agree a prompt payment discount, which improves your cash position rather than
           burdening it.</div></div></div>
       <div class="paso"><div><div class="t">A structured training programme</div>
         <div class="d">Based in Bogotá, with local and international faculty, plus sponsored
           sessions at universities with plastic surgery specialisations. One-to-one access
           converts better than congress footfall and it seeds the next generation of users.</div></div></div>
-      <div class="paso"><div><div class="t">Congress and speaker support</div>
-        <div class="d">ACT funds the stand at the national plastic surgery congress and at SAPS
-          and TDABS, as it has under a three year relationship. For this coming season ACT has
-          no budget allocated to speakers, so we are asking MicroAire to fund that side first.
-          A surgeon speaking about PAL to an international room is worth more to the brand than
-          to us, which is why we would rather MicroAire lead it than have it not happen.</div></div></div>
+      <div class="paso"><div><div class="t">Speakers at the congresses you already attend</div>
+        <div class="d">At SAAPS and TDAPS MicroAire covers half the stand, around USD 12,000,
+          and ACT builds, brands and staffs the whole thing. That part works and we are not asking
+          to change it. What is missing is speakers. Both meetings draw surgeons from Central
+          America, the United States, Europe and Asia, so a surgeon presenting PAL from that
+          platform reaches far beyond Colombia, and that is worth more to the brand than it is to
+          us. We are asking MicroAire to fund speakers at the congresses where ACT is present.</div></div></div>
     </div>
   </section>
 
@@ -353,11 +457,11 @@ footer{border-top:1px solid var(--linea);margin-top:56px;padding:26px 0 60px;
 
     <div class="tabla">
     <table>
-      <tr><th>Scenario</th><th>Year one</th><th>Units</th><th>Basis</th></tr>
-      <tr><td><b>Floor, committed</b></td><td class="n">USD 526,000</td><td class="n">≈ 24</td>
-          <td>What ACT delivers at a 12% policy rate with no service station and no credit line.</td></tr>
-      <tr><td><b>With the four requests</b></td><td class="n">USD 614,000</td><td class="n">28</td>
-          <td>The base plus the replacement programme and the segment that becomes financeable.</td></tr>
+      <tr><th>Scenario</th><th>Year one</th><th>How it is derived</th></tr>
+      <tr><td><b>Floor, committed</b></td><td class="n">USD 526,000</td>
+          <td>What ACT delivers with no service arrangement and no commercial terms. Equal to last year.</td></tr>
+      <tr><td><b>With the four requests</b></td><td class="n">USD 604,900</td>
+          <td>The floor plus fifteen per cent, and fifteen per cent again on each year that follows.</td></tr>
     </table>
     </div>
 
@@ -370,17 +474,24 @@ footer{border-top:1px solid var(--linea);margin-top:56px;padding:26px 0 60px;
     <table>
       <tr><th>Path</th><th>Year 1</th><th>Year 5</th><th>Five-year total</th></tr>
       <tr><td>Without support</td><td>USD 526,000</td><td>USD 526,000</td><td class="n">USD 2,630,000</td></tr>
-      <tr><td>With the four requests</td><td>USD 614,000</td><td>USD 1,073,890</td><td class="n">USD 4,139,822</td></tr>
+      <tr><td>With the four requests</td><td>USD 604,900</td><td>USD 1,057,974</td><td class="n">USD 4,078,466</td></tr>
       <tr class="tot"><td colspan="3">Difference, the value of MicroAire's participation</td>
-          <td class="n" style="color:var(--verde)">USD 1,509,822</td></tr>
+          <td class="n" style="color:var(--verde)">USD 1,448,466</td></tr>
     </table>
     </div>
 
+    <h3>What a unit actually is</h3>
+    <p>For reference against your own price list, a complete PAL SYNERGY system, console with
+      the infiltration and aspiration kits and the cart, lists at <b>USD 18,390.79</b> outside
+      the United States, and the PAL 750 handpiece at <b>USD 7,607.93</b>. The average of
+      USD 21,900 across our purchases reflects the mix of systems, handpieces and consumables
+      we actually buy rather than a single line item.</p>
+
     <div class="dest verde">
-      <p><b>A check on our own projection.</b> Year five implies 49 units. Against an addressable
-        base of 480 surgeons that is 10.2% annual penetration. We would rather put that figure
-        in front of you than have you calculate it yourselves. It is a share worth arguing
-        about rather than a hockey stick.</p>
+      <p><b>Every figure above comes from two numbers.</b> The committed floor and the growth
+        rate. Year one is the floor plus fifteen per cent; each year after grows fifteen per cent
+        on the one before it. There is no third assumption hidden anywhere in the table, which
+        means you can move either input and watch the whole projection move with it.</p>
     </div>
   </section>
 
@@ -391,10 +502,11 @@ footer{border-top:1px solid var(--linea);margin-top:56px;padding:26px 0 60px;
     <p class="lead">Five mechanisms. Each names who it targets and who pays for it.</p>
 
     <h3>The market we are addressing</h3>
-    <p>The Sociedad Colombiana de Cirugia Plastica lists over 950 certified plastic surgeons. Of
-      those, <b>350 already use MicroAire</b>, which is our installed base. Of the remaining 600,
-      around 20% work primarily in facial and reconstructive surgery and are not candidates for
-      PAL. That leaves an addressable target of <b>480 surgeons</b>.</p>
+    <p>The Sociedad Colombiana de Cirugía Plástica publishes a directory of certified plastic
+      surgeons; our count of it stands at approximately <b>950</b>. Of those, <b>350 already use
+      MicroAire</b>, which is our installed base. Of the remaining 600, around 20% work primarily
+      in facial and reconstructive surgery and are not candidates for PAL. That leaves an
+      addressable target of <b>480 surgeons</b>.</p>
 
     <div class="tabla">
     <table>
@@ -406,8 +518,8 @@ footer{border-top:1px solid var(--linea);margin-top:56px;padding:26px 0 60px;
           <td>Enabled by the 180-day terms</td></tr>
       <tr><td><b>University programme</b></td><td>Residents in plastic surgery specialisations</td>
           <td>ACT, with sponsorship</td></tr>
-      <tr><td><b>Congresses</b></td><td>National congress, SAPS, TDABS</td>
-          <td>Stand by ACT · speakers 50/50</td></tr>
+      <tr><td><b>Congresses</b></td><td>SAAPS and TDAPS reach Central America, the US, Europe and Asia; the national congress reaches Colombia</td>
+          <td>Stand funded by MicroAire, built by ACT</td></tr>
       <tr><td><b>Sales coverage</b></td><td>Barranquilla, Bucaramanga, Medellín, Bogotá, Cali</td>
           <td>ACT</td></tr>
     </table>
@@ -430,7 +542,38 @@ footer{border-top:1px solid var(--linea);margin-top:56px;padding:26px 0 60px;
       first year does not touch.</p>
   </section>
 
-  <!-- ═══ 9 ═══ -->
+  
+  <!-- ═══ 2027 ═══ -->
+  <section id="lanzamiento">
+    <div class="num">09 · 2027</div>
+    <h2>The SYNERGY 7020 and what 2027 requires</h2>
+    <p class="lead">Everything in this proposal points at one thing: 2027 is the consolidation of
+      the new SYNERGY 7020, and consolidation does not happen quietly.</p>
+
+    <p>A new console is not sold by having it in a catalogue. It is sold by surgeons seeing it
+      used, by other surgeons they respect talking about it, and by enough repetition that it
+      stops being the new thing and becomes the obvious thing. That is what the requests in
+      section 07 are for, and it is why the timing matters more than usual.</p>
+
+    <div class="tabla">
+    <table>
+      <tr><th>Lever</th><th>What it does for the 7020</th></tr>
+      <tr><td><b>Training</b></td><td>Hands on sessions in Bogotá and at university faculties, so the first contact with the 7020 is a surgeon using it rather than reading about it.</td></tr>
+      <tr><td><b>Congresses</b></td><td>SAAPS and TDAPS put the 7020 in front of an international audience. The national congress puts it in front of Colombia.</td></tr>
+      <tr><td><b>Speakers</b></td><td>A respected surgeon presenting the 7020 does more in twenty minutes than a year of our brochures.</td></tr>
+      <tr><td><b>Marketing</b></td><td>ACT will be deliberately aggressive: sustained campaigns on Instagram and direct email to the surgeon base, not occasional posts.</td></tr>
+      <tr><td><b>Service</b></td><td>None of the above survives contact with a six week repair. The service arrangement is what makes the rest credible.</td></tr>
+    </table>
+    </div>
+
+    <div class="dest">
+      <p>We are asking for the support now because a launch year cannot be rescued halfway
+        through. The congress calendar, the training schedule and the campaign all have to be
+        committed before the season starts, not after the first quarter shows what happened.</p>
+    </div>
+  </section>
+
+<!-- ═══ 9 ═══ -->
   <section id="campo">
     <div class="num">09 · Track record</div>
     <h2>What we have already built</h2>
@@ -445,7 +588,7 @@ footer{border-top:1px solid var(--linea);margin-top:56px;padding:26px 0 60px;
         under their own names.</li>
       <li><b>A direct advisory line</b> answered within one to two hours by a person, not a
         contact form.</li>
-      <li><b>A congress stand</b> operated by ACT under a three-year relationship with the two
+      <li><b>A congress presence</b> built and staffed by ACT at SAAPS and TDAPS, the two
         largest international meetings held in Colombia.</li>
       <li><b>Published clinical claims</b> with the study behind them: 31% more volume per minute, 35% less surgical time, 49% less surgeon fatigue.</li>
     </ul>
@@ -464,11 +607,13 @@ footer{border-top:1px solid var(--linea);margin-top:56px;padding:26px 0 60px;
     <p class="lead">PAL is the business today. Endotine is what makes ACT an integral
       distributor rather than a single-line reseller.</p>
 
-    <p><b>PAL, selling now.</b> Power-assisted lipoplasty and the cannula family. <b>The INVIMA
-      sanitary registration is held by ACT and is current.</b> There is no registration to
-      obtain, no transfer to negotiate, no launch delay and no dependency on a third party to
-      keep the product legally importable. This is where the 28 units and the USD 614,000 come
-      from.</p>
+    <p><b>PAL, selling now.</b> Power assisted lipoplasty and the cannula family.
+      Registration sits with MicroAire, as it should: the manufacturer owns its registrations and
+      chooses who carries the brand. What we bring is the other half of that. <b>ACT has the team,
+      the experience and the working knowledge of how Colombian registration actually operates</b>,
+      including how to move it, and we commit to keeping everything regulatory relating to
+      MicroAire compliant with local rules. We are asking for the representation to be transferred
+      to ACT.</p>
 
     <p><b>Endotine, registration in progress.</b> Absorbable fixation for facial rejuvenation.
       Its INVIMA process is already under way at ACT's own cost and risk, ahead of any
@@ -494,7 +639,7 @@ footer{border-top:1px solid var(--linea);margin-top:56px;padding:26px 0 60px;
       <div class="paso"><div><div class="t">Confirm the four support items</div>
         <div class="d">Service station, 180-day terms, training programme, congress support.</div></div></div>
       <div class="paso"><div><div class="t">Agree the floor and the target</div>
-        <div class="d">USD 526,000 committed. USD 614,000 with your participation.</div></div></div>
+        <div class="d">USD 526,000 committed. USD 604,900 with your participation, compounding at fifteen per cent.</div></div></div>
       <div class="paso"><div><div class="t">Recognise ACT across the portfolio</div>
         <div class="d">PAL now, Endotine as its registration completes.</div></div></div>
       <div class="paso"><div><div class="t">Set a date to begin</div>
@@ -508,12 +653,34 @@ footer{border-top:1px solid var(--linea);margin-top:56px;padding:26px 0 60px;
   </section>
 
   <footer>
-    <b>ACT Soluciones Médicas SAS</b> · Bogotá, Colombia<br>
-    microairecolombia.com · WhatsApp +57 321 421 2435 · +57 305 373 5556<br><br>
-    Market data: ISAPS International Survey on Aesthetic/Cosmetic Procedures performed in 2024,
-    Colombia country page. Monetary data: Banco de la República, policy rate decisions of June
-    and August 2026 and the representative market rate series. Clinical figures as published at
-    microairecolombia.com with the supporting study.
+    <div class="fuentes">
+      <h5>Sources</h5>
+      <ol>
+        <li>ISAPS, <i>International Survey on Aesthetic/Cosmetic Procedures performed in 2024</i>,
+          Colombia country page. Procedure volumes and the aspiration subtotal.
+          <a href="https://www.isaps.org/media/razfvmsk/isaps-global-survey-2024.pdf">isaps.org</a></li>
+        <li>Banco de la República, Board of Directors monetary policy decisions, 2026, and the
+          representative market rate series used for the peso figures.
+          <a href="https://www.banrep.gov.co/en/news/board-directors-march-2026">banrep.gov.co</a></li>
+        <li>Sociedad Colombiana de Cirugía Plástica, surgeon directory, for the certified
+          surgeon count used in the target market.
+          <a href="https://cirugiaplastica.org.co/buscar-cirujano/">cirugiaplastica.org.co</a></li>
+        <li>MicroAire Surgical Instruments, PAL product literature and the SYNERGY sales kit
+          price list, for equipment and handpiece pricing.
+          <a href="https://www.microaire.com/">microaire.com</a></li>
+        <li>Clinical figures and the supporting study as published by ACT at
+          <a href="https://microairecolombia.com">microairecolombia.com</a></li>
+        <li>Competing systems referenced in section 5:
+          <a href="https://visionmedica.co">Visión Médica</a>,
+          <a href="https://fagamed.com.br">Faga Medical</a>,
+          <a href="https://nouvag.com/en/">Nouvag</a>.</li>
+      </ol>
+      <p class="nota">Every figure in this document is either published, and cited above, or
+        calculated from figures that are. The workbook behind it is available on request and
+        shows each calculation in full.</p>
+    </div>
+    <p class="firma"><b>ACT Soluciones Médicas SAS</b> · Bogotá, Colombia<br>
+      microairecolombia.com · WhatsApp +57 321 421 2435 · +57 305 373 5556</p>
   </footer>
 
 </div>
