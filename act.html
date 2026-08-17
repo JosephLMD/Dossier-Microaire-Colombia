@@ -135,6 +135,62 @@ footer{border-top:1px solid var(--linea);margin-top:56px;padding:26px 0 60px;
 </style>
 
 <style>
+/* ═══ LA CASA DE ACT ══════════════════════════════════════════════════════
+   El dossier es el documento de MicroAire: azul de MicroAire, wordmark de
+   MicroAire arriba. Esta pagina es de ACT, y tiene que notarse al primer
+   golpe de vista, no despues de leer el titulo.
+
+   Como esta hecho: el dossier define toda su paleta en variables CSS, asi que
+   aqui no se copia ni una sola regla de maqueta. Se reescriben las variables
+   y la estructura entera cambia de color sola. Si manana se toca un margen en
+   el dossier, esta pagina lo hereda igual que antes.
+
+   Los colores salen del logo que subiste, con una correccion: el verde
+   azulado del logo (#3E8C98) sobre papel crema da 3,76 de contraste, que no
+   alcanza para texto corrido segun WCAG AA. Para titulares y enlaces se usa
+   #337781, que es el mismo color un punto mas oscuro y ya da 4,97. */
+:root{
+  --papel:#FAF6EF;        /* el crema del logo, un poco mas cargado.
+                             #FDFBF9, que es el valor literal del archivo del
+                             logo, en pantalla se lee como blanco: se paga la
+                             idea sin recibirla. Este es el tono mas profundo
+                             con el gris de texto en 5,10 y el verde azulado
+                             en 4,76, los dos por encima del 4,5 de AA y con
+                             mas holgura que el tono siguiente.
+                             De paso, las tarjetas blancas por fin se despegan
+                             del papel y se leen como tarjetas. */
+  --tinta:#0F253D;        /* el navy del wordmark ACT */
+  --gris:#5E6B72;
+  --linea:#E9E2D6;        /* filete calido; sobre el crema mas cargado hay que
+                             ajustarlo o desaparece */
+  --azul:#3E8C98;         /* el verde azulado del logo, para acentos */
+  --azul-d:#337781;       /* version que si pasa AA para texto */
+  --azul-l:#EAF3F2;
+  --verde:#2A626B;
+  --oro:#9A7B2E;
+}
+body{background:var(--papel)}
+
+/* ── la banda de arriba, en navy con el logo en blanco ── */
+header{background:var(--tinta);border-bottom:0;backdrop-filter:none}
+header .bar{align-items:center;padding:11px 24px;gap:12px}
+header .bar span{color:#93A8B9;font-size:12px}
+header .bar .r{color:#7B90A2}
+.marcabar{width:28px;height:28px;display:block;flex:0 0 auto}
+.marcabar-txt{font-family:'Inter',sans-serif;font-size:13.5px;font-weight:700;
+  color:#fff;letter-spacing:-.2px}
+
+/* ── portada ── */
+.marca-act{display:block;width:212px;height:auto;margin:0 0 24px}
+.port{padding:46px 0 10px}
+
+/* ── los recuadros, recalibrados sobre crema ── */
+.dest{background:var(--azul-l);border-left-color:var(--azul)}
+.dest.verde{background:#EDF4F3;border-left-color:#2A626B}
+.dest.oro{background:#FBF5E8;border-left-color:#9A7B2E}
+th{border-bottom-color:var(--tinta)}
+td{border-bottom-color:var(--linea)}
+
 /* ── organigrama ─────────────────────────────────────────────────────────
    Se dibuja con cajas y bordes, no con una imagen: asi se lee en el telefono,
    se puede copiar el texto, y no hay un PNG que se vea borroso al proyectar. */
@@ -168,6 +224,15 @@ footer{border-top:1px solid var(--linea);margin-top:56px;padding:26px 0 60px;
 .ciudad{background:#fff;padding:16px 15px;font-family:'Inter',sans-serif}
 .ciudad .c{font-size:15px;font-weight:700;letter-spacing:-.2px}
 .ciudad .d{font-size:12px;color:var(--gris);margin-top:4px;line-height:1.45}
+.ciudad .c{color:var(--tinta)}
+
+/* Estas cuatro van al final a proposito. Las reglas de arriba ya definen
+   .org .tope, y con igual especificidad gana la ultima que se declara: puestas
+   antes, el navy no se aplicaba nunca. La cupula del organigrama en navy solido
+   es lo que hace que se lea como cupula y no como una caja mas. */
+.org .tope{background:var(--tinta);border-color:var(--tinta)}
+.org .tope .t{color:#fff}
+.org .tope .s{color:#9DB3C4}
 </style>
 
 </head>
@@ -175,15 +240,16 @@ footer{border-top:1px solid var(--linea);margin-top:56px;padding:26px 0 60px;
 
 <header>
   <div class="bar">
-    <b>ACT Soluciones Médicas</b>
-    <span>· The company</span>
-    <span class="r">Annex to the distribution proposal · August 2026</span>
+    <img class="marcabar" src="act-logo-blanco.png" alt="" width="660" height="660">
+    <span class="marcabar-txt">ACT Soluciones Médicas</span>
+    <span class="r">Annex to the MicroAire distribution proposal · August 2026</span>
   </div>
 </header>
 
 <div class="wrap">
 
   <div class="port">
+    <img class="marca-act" src="act-logo.png" alt="ACT Soluciones Médicas SAS" width="1024" height="1024">
     <div class="k">Company profile · Annex</div>
     <h1>The company behind<br>the proposal.</h1>
     <p class="sub">The distribution proposal argues for a plan. This page is about the
