@@ -130,6 +130,17 @@ ul.lista li::before{content:'';position:absolute;left:2px;top:11px;width:6px;hei
 .firma{font-size:13.5px;color:var(--gris);line-height:1.7}
 footer{border-top:1px solid var(--linea);margin-top:56px;padding:26px 0 60px;
   font-family:'Inter',sans-serif;font-size:13px;color:var(--gris);line-height:1.7}
+/* ── botones a los anexos ── */
+.anexos{display:flex;flex-wrap:wrap;gap:10px;margin:30px 0 6px;justify-content:center}
+.anexos a{display:inline-flex;align-items:center;gap:8px;font-family:'Inter',sans-serif;
+  font-size:13.5px;font-weight:600;letter-spacing:.1px;text-decoration:none;
+  padding:11px 18px;border-radius:9px;border:1.5px solid var(--azul-d);color:var(--azul-d);
+  background:#fff;transition:background .15s,color .15s}
+.anexos a:hover{background:var(--azul-l)}
+.anexos a.solido{background:var(--azul-d);color:#fff;border-color:var(--azul-d)}
+.anexos a.solido:hover{background:#00406E}
+.anexos .n{font-size:11px;font-weight:700;opacity:.7;letter-spacing:.4px}
+@media print{.anexos{display:none}}
 @media print{header{position:static}section{page-break-inside:avoid}}
 </style>
 </head>
@@ -183,9 +194,9 @@ footer{border-top:1px solid var(--linea);margin-top:56px;padding:26px 0 60px;
       convert a flat market into a growing one.</p>
 
     <p><b>What we ask for.</b> A certified service station in Colombia. Payment terms of 180
-      days, with a prompt payment discount on the invoices we settle immediately. A structured
-      surgeon training programme based in Bogotá. Support for marketing and
-      congress activity: speakers at the meetings where ACT already builds and staffs the stand.</p>
+      days, so that ACT can carry the credit its customers need. A structured surgeon training
+      programme based in Bogotá. Support for marketing and congress activity: speakers at the
+      meetings where ACT already builds and staffs the stand.</p>
 
     <p><b>What we commit to.</b> <b>USD 526,000</b> in the coming year with none of the above. That is the floor, and it matches what was purchased last year. With the four requests in place,
       <b>USD 604,900</b>, which is the floor plus 15%, then 13% in year two and 8% a year after that.</p>
@@ -504,17 +515,19 @@ footer{border-top:1px solid var(--linea);margin-top:56px;padding:26px 0 60px;
         <div class="d">Repairs in three to five days rather than six weeks. Removes the most
           frequently cited reason surgeons decline to renew, and removes international repair
           shipping from your costs.</div></div></div>
-      <div class="paso"><div><div class="t">Payment terms of 180 days, and a prompt payment discount</div>
-        <div class="d">These are one request with two halves, and the second half is the one that
-          pays you back. The 180 days let ACT carry the commercial terms its customers need in a
-          market where the cost of money has risen sharply. In exchange, on every invoice we can
-          settle immediately, we are asking for a prompt payment discount.
+      <div class="paso"><div><div class="t">Payment terms of 180 days</div>
+        <div class="d">This is the request that unlocks the others, and it is not about ACT's
+          cash flow. It is about the surgeon's.
           <br><br>
-          <b><b>We know this is a longer term than usual, and we are not asking for it lightly.</b> It comes paired with something that moves value back to you rather than away.<br><br>Read that direction carefully: we are offering to pay you sooner.</b> A discount for
-          immediate settlement is not a concession you make to us, it is cash arriving in your
-          account weeks earlier than it otherwise would, on invoices that would otherwise sit in
-          the credit line we are also requesting. You improve your working capital and we improve
-          our margin, out of the same mechanism.</div></div></div>
+          The policy rate in Colombia moved from 9.25% to 12.00% inside a single year. At that
+          cost of money a surgeon does not decline the equipment, he defers it, and a deferral is
+          indistinguishable from a lost sale until it is too late to do anything about it. The
+          answer the market actually responds to is credit at the point of decision.
+          <br><br>
+          <b>ACT can extend that credit. It cannot extend terms it has not been given.</b> The
+          180 days are what let ACT carry the surgeon, and carrying the surgeon is what opens the
+          segment that is not buying today. We know this is a longer term than usual, and we are
+          not asking for it lightly.</div></div></div>
       <div class="paso"><div><div class="t">A structured training programme</div>
         <div class="d">Based in Bogotá, with local and international faculty, plus sponsored
           sessions at universities with plastic surgery specialisations. One-to-one access
@@ -750,7 +763,7 @@ footer{border-top:1px solid var(--linea);margin-top:56px;padding:26px 0 60px;
           training calendar and a commercial plan cannot be built by a distributor who is one of
           several.</div></div></div>
       <div class="paso"><div><div class="t">Confirm the four support items</div>
-        <div class="d">Service station, 180-day terms with a prompt payment discount, training programme, congress support.</div></div></div>
+        <div class="d">Service station, 180-day terms, training programme, congress support.</div></div></div>
       <div class="paso"><div><div class="t">Agree the floor and the target</div>
         <div class="d">USD 526,000 committed as the floor. USD 604,900 in year one with the four requests in place, growing 15%, then 13%, then 8% a year.</div></div></div>
       <div class="paso"><div><div class="t">Recognise ACT across the portfolio</div>
@@ -817,9 +830,16 @@ footer{border-top:1px solid var(--linea);margin-top:56px;padding:26px 0 60px;
         reason this proposal formalises a channel instead of opening one.</p>
     </div>
 
-    <p>We have put the full company structure, the regional teams, the regulatory unit and the
-      service and education plans on a page of their own, so that this document did not have to
-      carry them. <b><a href="act.html">You are very welcome to look at ACT in detail</a>.</b></p>
+    <p>Two annexes sit alongside this document. The first sets out the company: the full
+      structure, the regional teams, the regulatory unit, and the service and education plans. The
+      second prices this proposal from MicroAire's side, with the model, the options considered and
+      every assumption behind them.</p>
+
+    <div class="anexos">
+      <a class="solido" href="business-case.html">The business case <span class="n">NPV · IRR · break-even</span></a>
+      <a href="act.html">ACT in detail <span class="n">STRUCTURE · TEAMS · SERVICE</span></a>
+      <a href="ACT-MicroAire-Business-Case.pdf" download>Business case as PDF <span class="n">8 PAGES</span></a>
+    </div>
   </section>
 
   <footer>
