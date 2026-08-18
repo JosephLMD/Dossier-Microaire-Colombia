@@ -140,6 +140,9 @@ footer{border-top:1px solid var(--linea);margin-top:56px;padding:26px 0 60px;
 .anexos a.solido{background:var(--azul-d);color:#fff;border-color:var(--azul-d)}
 .anexos a.solido:hover{background:#00406E}
 .anexos .n{font-size:11px;font-weight:700;opacity:.7;letter-spacing:.4px}
+/* Dentro de una seccion el boton va alineado con el texto, no centrado: ahi es
+   parte del parrafo que lo precede, no un cierre. */
+.anexos.izq{justify-content:flex-start;margin:22px 0 4px}
 @media print{.anexos{display:none}}
 @media print{header{position:static}section{page-break-inside:avoid}}
 </style>
@@ -714,6 +717,11 @@ footer{border-top:1px solid var(--linea);margin-top:56px;padding:26px 0 60px;
         does not appear on any invoice.</li>
     </ul>
 
+    <div class="anexos izq">
+      <a href="https://microairecolombia.com" target="_blank" rel="noopener">See microairecolombia.com
+        <span class="n">BUILT AND RUN BY ACT</span></a>
+    </div>
+
     <div class="dest">
       <p>All of it was built to make it easier for a Colombian surgeon to choose MicroAire, and
         all of it was built before anyone asked us to. What the four requests change is the
@@ -830,15 +838,14 @@ footer{border-top:1px solid var(--linea);margin-top:56px;padding:26px 0 60px;
         reason this proposal formalises a channel instead of opening one.</p>
     </div>
 
-    <p>Two annexes sit alongside this document. The first sets out the company: the full
-      structure, the regional teams, the regulatory unit, and the service and education plans. The
-      second prices this proposal from MicroAire's side, with the model, the options considered and
-      every assumption behind them.</p>
+    <p>An annex sits alongside this document and sets out the company itself: the full structure,
+      the regional teams, the regulatory unit, and the service and education plans. Alongside it,
+      the site ACT built for the brand in this market is open to be looked at.</p>
 
     <div class="anexos">
-      <a class="solido" href="business-case.html">The business case <span class="n">NPV · IRR · break-even</span></a>
-      <a href="act.html">ACT in detail <span class="n">STRUCTURE · TEAMS · SERVICE</span></a>
-      <a href="ACT-MicroAire-Business-Case.pdf" download>Business case as PDF <span class="n">8 PAGES</span></a>
+      <a class="solido" href="act.html">ACT in detail <span class="n">STRUCTURE · TEAMS · SERVICE</span></a>
+      <a href="https://microairecolombia.com" target="_blank" rel="noopener">microairecolombia.com
+        <span class="n">THE BRAND'S HOME IN COLOMBIA</span></a>
     </div>
   </section>
 
